@@ -1,6 +1,7 @@
 const users = []
 
-const addUser = (id, name, room) => {
+const addUser = ({id, name, room}) => {
+    //console.log(name, room)
     name = name.trim().toLowerCase();
     room = room.trim().toLowerCase();
 
@@ -12,11 +13,11 @@ const addUser = (id, name, room) => {
 
     const user = {id, name, room};
 
-    user.push(user);
+    users.push(user);
 
     return {user};
 }
-
+ 
 const removeUser = (id) => {
     const index = users.find((user) => user.id === id);
 

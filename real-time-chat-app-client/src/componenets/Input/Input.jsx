@@ -6,11 +6,11 @@ function Input({message, setMessage, sendMessage}) {
       <form className="form">
         <input
           type="text"
-          placeholder="type a message"
+          placeholder="type a message..."
           className="input"
           value={message}
           onChange={event => setMessage(event.target.value)}
-          onKeyPress={event => (event.key === "Enter" ? sendMessage : null)}
+          onKeyPress={event => (event.key === "Enter" ? sendMessage(event) : null)}
         />
         <button className="sendButton" onClick={event => sendMessage(event)}>Send</button>
       </form>

@@ -19,7 +19,7 @@ io.on('connection', (socket) => {
         const error = true;
 
         if(error){
-            callback({error : 'error'});
+            //callback({error : 'error'});
         }else{
 
         }
